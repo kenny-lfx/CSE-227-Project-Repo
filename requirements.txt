@@ -1,4 +1,3 @@
-# Pin to reasonably recent, CPU-safe versions
 opencv-python-headless==4.10.0.84
 numpy==1.26.4
 pillow==10.4.0
@@ -8,6 +7,5 @@ mediapipe==0.10.14
 # PyTorch CPU wheels from PyPI (2.4+ provide CPU builds)
 torch==2.4.1
 torchvision==0.19.1
-# Detection/OCR (optional)
 ultralytics==8.3.26
 pytesseract==0.3.13
