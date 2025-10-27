@@ -1,0 +1,34 @@
+{
+  "video": "/app/videos/sample2.mp4",
+  "out_dir": "/app/results/full_run",
+  "resolution": [
+    1600,
+    900
+  ],
+  "num_frames_used": 206,
+  "seg_backend": "deeplabv3",
+  "align_method": "flow",
+  "aggregate": "median",
+  "postprocess": {
+    "denoise": true,
+    "clahe": true
+  },
+  "mprnet_used": false,
+  "yolo": {
+    "detections": [
+      {
+        "class_id": 0,
+        "conf": 0.5743849873542786,
+        "xyxy": [
+          379.0889892578125,
+          305.68243408203125,
+          1074.8270263671875,
+          889.71826171875
+        ]
+      }
+    ]
+  },
+  "ocr": {
+    "text": " \n\nPeon ard\n\f"
+  }
+}

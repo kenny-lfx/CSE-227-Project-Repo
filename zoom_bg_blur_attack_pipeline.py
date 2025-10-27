@@ -596,13 +596,34 @@ if __name__ == "__main__":
 
 '''
 python zoom_bg_blur_attack_pipeline.py \
-  --video videos/sample2.mp4 \
-  --out_dir results/sample1 \
-  --seg_backend mediapipe \
-  --align_method orb \
-  --aggregate mean \
-  --fps 15 \
-  --resize_long 960 \
-  --denoise --clahe
+  --video videos/meeting_01.mp4 \
+  --out_dir results/me_result \
+  --seg_backend deeplabv3 \
+  --device cuda \
+  --align_method flow \
+  --aggregate median \
+  --fps 20 \
+  --resize_long 1280 \
+  --sample_every 1 \
+  --denoise --clahe \
+  --yolo --ocr
+
+python zoom_bg_blur_attack_pipeline.py \
+  --video videos/meeting_01.mp4 \
+  --out_dir results/me_best_quality \
+  --seg_backend deeplabv3 \
+  --device cuda \
+  --align_method flow \
+  --aggregate median \
+  --fps 30 \
+  --resize_long 1920 \
+  --sample_every 1 \
+  --denoise --clahe \
+  --yolo --ocr
+
+  python /app/MPRNet/Deblurring/test.py \
+  --input_dir /app/results/run_best \
+  --result_dir /app/results/run_best/mprnet_out \
+  --weights /app/MPRNet/Deblurring/pretrained_models/model_deblurring.pth
 
 '''
